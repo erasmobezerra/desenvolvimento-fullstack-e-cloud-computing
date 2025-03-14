@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursividade</title>
+
+    <script>
+        // Recursividade: Chamada de uma funcao dentro dela mesma.
+
+        // Fatorial de um número
+        function fatorial(n) {
+            if (n == 1) {
+                return 1;
+            }
+            return n * fatorial(n - 1);
+        }
+
+        console.log('Fatorial de 5: ' + fatorial(5));
+
+
+        // Contagem Progressiva
+        function contar(numero) {
+            if (numero <= 10) {
+                console.log('Contagem Progressiva: ' + numero);
+                contar(numero + 1);
+            }            
+        }
+        contar(3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <script>
+
+        const carros = ['Gol', 'Logan', 'Fusca'];
+        //const carros = new Array('Gol', 'Logan', 'Fusca');
+        
+        for(let carro of carros) {
+            console.log(carro);
+        }
+
+        // table imprime o array como uma tabela
+        console.table(carros);
+
+        // push adiciona um elemento no final do array
+        carros.push('Palio');
+        console.table(carros);
+
+        // unshift adiciona um elemento no inicio do array
+        carros.unshift('HB20');
+        console.table(carros);
+
+        // pop remove o ultimo elemento do array
+        carros.pop();
+        console.table(carros);
+
+        // shift remove o primeiro elemento do array
+        carros.shift();
+        console.table(carros);
+
+        // splice possui três funcionalidades: excluir, inserir e substituir
+        carros.splice(1, 1); // vai no item 1 exclui 1 item a partir dele
+        console.table(carros);
+        carros.splice(1, 0, 'Celta'); // vai no item 1 e insere o Celta
+        console.table(carros);
+        carros.splice(1, 1, 'Civic'); // vai no item 1, substitui itens pelo Civic
+        console.table(carros);
+
+        // sort ordena o array
+        carros.sort();
+        console.table(carros);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

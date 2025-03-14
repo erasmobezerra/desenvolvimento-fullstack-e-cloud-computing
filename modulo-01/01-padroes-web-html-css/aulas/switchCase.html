@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <title>Estruturas de Condição - Switch</title>
+
+    <script>
+        const salario = 1000.56;
+        const cargo = prompt('Digite o cargo:');
+        let aumento = 0;
+
+        switch (cargo) {
+            case 'Estagiario':
+                aumento = '1';
+                break;
+            case 'Junior':
+                aumento = '0.5';
+                break;
+            case 'Pleno':
+                aumento = '0.25';
+                break;
+            case 'Senior':
+                aumento = '0.01';
+                break;
+            default:
+                alert('Favor escolher um cargo válido');
+                break;
+        }
+
+        const novoSalario = (salario * aumento) + salario;
+        alert('O novo salario é: R$ ' + novoSalario.toFixed(2));
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
