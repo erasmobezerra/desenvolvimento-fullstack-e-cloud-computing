@@ -16,7 +16,7 @@ function alterarQuantidade(produto, acao) {
 
 }
 
-// Resolução do Professor: 
+
 // A soma é resultado da verificação dos valores dos produtos no momento e é feita a soma. 
 // Utiliza as funções de validação abaixo
 function soma() {
@@ -29,17 +29,15 @@ function soma() {
     document.getElementById('subtotal').innerHTML = formatarValor(soma)
 }
 
-// Mantém números e pontos decimais
+// Minha Resolução: Remove caracteres indesejados e substituir a vírgula decimal pelo ponto.
 function somenteNumeros(n) {
-    return n.replace(/\D/g, '')
+    return String(n)
+        .replace(/[^\d,]/g, '') // Remove tudo que não seja números ou vírgula decimal
+        .replace(',', '.'); // Substitui vírgula decimal por ponto
 }
+
 
 // Formatar um número como um valor monetário em reais (R$)
 function formatarValor(n) {
     return 'R$ ' + n.toLocaleString('pt-BR')
 }
-
-
-
-
-
