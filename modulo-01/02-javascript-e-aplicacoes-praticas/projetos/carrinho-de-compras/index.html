@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="js/funcoes.js"></script>
+
     <title>Carrinho de Compras</title>
 </head>
 
@@ -42,17 +44,13 @@
                         <div><span class="produto-item">Código:</span>123456</div>
                         <div><span class="produto-item">Cor:</span>Preto</div>
                     </td>
-                    <td>6999.99</td>
+                    <td id="valor_1">8000.00</td>
                     <td>
-                        <span class="badge text-bg-danger">
-                            <i class="bi bi-dash-lg"></i>
-                        </span>
-                        0
-                        <span class="badge text-bg-primary">
-                            <i class="bi bi-plus"></i>
-                        </span>
+                        <span class="badge text-bg-danger" onclick="alterarQuantidade(1, '-')"><i class="bi bi-dash-lg"></i></span>
+                        <span id="qtd_1">0</span>
+                        <span class="badge text-bg-primary" onclick="alterarQuantidade(1, '+')"><i class="bi bi-plus"></i></span>
                     </td>
-                    <td>0</td>
+                    <td id="total_1">0</td>
                 </tr>
                 <tr>
                     <td><img src="img/image2.webp" height="200" alt="Produto 2"></td>
@@ -61,17 +59,13 @@
                         <div><span class="produto-item">Código:</span>Código: 654321</div>
                         <div><span class="produto-item">Cor:</span>Cor: Preto</div>
                     </td>
-                    <td>319.99</td>
+                    <td id="valor_2">300.00</td>
                     <td>
-                        <span class="badge text-bg-danger">
-                            <i class="bi bi-dash-lg"></i>
-                        </span>
-                        0
-                        <span class="badge text-bg-primary">
-                            <i class="bi bi-plus"></i>
-                        </span>
+                        <span class="badge text-bg-danger" onclick="alterarQuantidade(2, '-')"><i class="bi bi-dash-lg"></i></span>
+                        <span id="qtd_2">0</span>
+                        <span class="badge text-bg-primary" onclick="alterarQuantidade(2, '+')"><i class="bi bi-plus"></i></span>
                     </td>
-                    <td>0</td>
+                    <td id="total_2">0</td>
                 </tr>
                 <tr>
                     <td><img src="img/image3.jpg" height="200" alt="Produto 3"></td>
@@ -80,24 +74,20 @@
                         <div><span class="produto-item">Código:</span>Código: 3696533</div>
                         <div><span class="produto-item">Cor:</span>Cor: Preto</div>
                     </td>
-                    <td>271.99</td>
+                    <td id="valor_3">200.00</td>
                     <td>
-                        <span class="badge text-bg-danger">
-                            <i class="bi bi-dash-lg"></i>
-                        </span>
-                        0
-                        <span class="badge text-bg-primary">
-                            <i class="bi bi-plus"></i>
-                        </span>
+                        <span class="badge text-bg-danger" onclick="alterarQuantidade(3, '-')"><i class="bi bi-dash-lg"></i></span>
+                        <span id="qtd_3">0</span>
+                        <span class="badge text-bg-primary" onclick="alterarQuantidade(3, '+')"><i class="bi bi-plus"></i></span>
                     </td>
-                    <td>0</td>
+                    <td id="total_3">0</td>
                 </tr>
             </tbody>
         </table>
 
         <footer class="text-center">
             <i class="bi bi-cart"></i>
-            <span>Subtotal: R$ 0</span>
+            Subtotal: R$ <span id= "subtotal">0</span>
         </footer>
     </div>
 
