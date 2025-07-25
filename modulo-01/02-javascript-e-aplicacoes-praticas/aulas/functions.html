@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+
+    <script>
+
+        // 1. Declaração de Função(Function Declaration)
+        //Mais tradicional.
+        //Sofre hoisting(pode ser chamada antes da sua definição).
+        //Ideal para funções reutilizáveis
+        function saudacao(nome) {
+            return `Olá, ${nome}!`;
+        }
+
+
+        //🧩 2. Expressão de Função(Function Expression)
+        //Atribuída a uma variável.
+        //Não sofre hoisting.
+        //Pode ser anônima ou nomeada.
+        const saudacao = function (nome) {
+            return `Olá, ${nome}!`;
+        };
+
+
+        //⚡ 3. Arrow Function(Função de Seta)
+        //Sintaxe mais curta.
+        //Não possui seu próprio this, arguments ou super.
+        //Ideal para callbacks e funções simples.
+        const saudacao = (nome) => `Olá, ${nome}!`;
+
+        // Arrow Function com uma linha de código após a seta: com () ou não
+        const soma = (n1, n2) => n1 + n2;
+        console.log(soma(10, 20));
+
+        // Arrow Function com mais de uma linha de código: {}
+        const subtrair = (n1, n2) => {
+            const resultado = n1 - n2;
+            return resultado;
+        }
+        console.log(subtrair(10, 20));
+
+
+
+        //🔄 4. IIFE(Immediately Invoked Function Expression)
+        //Executada assim que é definida.
+        //Cria escopo isolado.
+        //Útil para evitar poluição do escopo global.
+        (function () {
+            console.log('Executada imediatamente!');
+        })();
+
+
+
+        //🧬 5. Método em Objeto
+        //Forma reduzida de declarar métodos dentro de objetos.
+        //Pode ser usada com async ou * (generator).
+        const pessoa = {
+            falar() {
+                return 'Oi!';
+            }
+        };
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
