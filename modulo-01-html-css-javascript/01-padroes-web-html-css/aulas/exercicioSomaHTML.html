@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript</title>
+
+        <script>
+
+            function soma() {
+                const n1 = document.getElementById('n1').value;
+                const n2 = document.getElementById('n2').value;
+                const soma = Number(n1) + Number(n2);
+                // alert("A soma dos dois números digitados é: " + soma);
+
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = "A soma dos dois números digitados é: " + soma;
+            }
+
+            function subtrair() {
+                const n1 = document.getElementById('n1').value;
+                const n2 = document.getElementById('n2').value;
+                const subtrair = Number(n1) - Number(n2);                
+
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = "A subtração dos dois números digitados é: " + subtrair;
+            }
+
+            function multiplicar() {
+                const n1 = document.getElementById('n1').value;
+                const n2 = document.getElementById('n2').value;
+                const multiplicar = Number(n1) * Number(n2);                
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = "A multiplicação dos dois números digitados é: " + multiplicar;
+            }
+
+            function dividir() {
+                const n1 = document.getElementById('n1').value;
+                const n2 = document.getElementById('n2').value;
+                const dividir = Number(n1) / Number(n2);                
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = "A divisão dos dois números digitados é: " + dividir;
+            }
+
+            
+
+        </script>
+
+    </head>
+    <body>
+
+        <form action="">
+            N1: <input type="text" id="n1"></form>
+            N2: <input type="text" id="n2"></br>
+
+            <input type="button" value="Somar" onclick="soma()">
+            <input type="button" value="Subtrair" onclick="subtrair()">
+            <input type="button" value="Multiplicar" onclick="multiplicar()">
+            <input type="button" value="Dividir" onclick="dividir()">
+
+            <h1 id="resultado">resultado</h1>
+        </form>
+        
+    </body>
+</html>

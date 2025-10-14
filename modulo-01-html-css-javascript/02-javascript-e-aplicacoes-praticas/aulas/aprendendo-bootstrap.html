@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>Bootstrap</h1>
+
+        <h2>Tabelas</h2>
+
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr>
+                    <td>João</td>
+                    <td>1234-5678</td>
+                    <td>Rua A, 123</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>8765-4321</td>
+                    <td>Avenida B, 456</td>
+                </tr>
+                <tr>
+                    <td>Carlos</td>
+                    <td>9876-5432</td>
+                    <td>Rua C, 789</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+        <h2>1.Botões</h2>
+
+        <input class="btn btn-primary" type="button" value="Salvar">
+        <button class="btn btn-danger type=" button">Cancelar</button>
+        <button class="btn btn-warning type=" button">Cancelar</button>
+
+        <button class="btn btn-info type=" button">Informação</button>
+
+        <h2>2.Alerts</h2>
+
+        <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            A simple secondary alert—check it out!
+        </div>
+        <div class="alert alert-success" role="alert">
+            A simple success alert—check it out!
+        </div>
+
+
+        <h2>3.Acordeão</h2>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Este é o corpo do primeiro item do acordeão.</strong> Ele está oculto por padrão, até
+                        que o plugin de colapso adicione as classes apropriadas que usamos para estilizar cada elemento.
+                        Essas classes controlam a aparência geral, bem como a exibição e ocultação por meio de
+                        transições CSS. Você pode modificar qualquer um desses com CSS personalizado ou substituindo
+                        nossas variáveis padrão. Também vale a pena notar que quase qualquer HTML pode ser inserido
+                        dentro do <code>.accordion-body</code>, embora a transição limite o overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Este é o corpo do segundo item do acordeão.</strong> Ele está oculto por padrão, até que
+                        o plugin de colapso adicione as classes apropriadas que usamos para estilizar cada elemento.
+                        Essas classes controlam a aparência geral, bem como a exibição e ocultação por meio de
+                        transições CSS. Você pode modificar qualquer um desses com CSS personalizado ou substituindo
+                        nossas variáveis padrão. Também vale a pena notar que quase qualquer HTML pode ser inserido
+                        dentro do <code>.accordion-body</code>, embora a transição limite o overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Este é o corpo do terceiro item do acordeão.</strong> Ele está oculto por padrão, até
+                        que o plugin de colapso adicione as classes apropriadas que usamos para estilizar cada elemento.
+                        Essas classes controlam a aparência geral, bem como a exibição e ocultação por meio de
+                        transições CSS. Você pode modificar qualquer um desses com CSS personalizado ou substituindo
+                        nossas variáveis padrão. Também vale a pena notar que quase qualquer HTML pode ser inserido
+                        dentro do <code>.accordion-body</code>, embora a transição limite o overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <h2>4.Cartões</h2>
+
+        <div class="card text-bg-dark mb-3" style="width: 18rem;">
+            <img src="img/image1.webp" class="card-img-top" alt="FIgura 1">
+            <div class="card-body">
+                <h5 class="card-title">Notebook Gamer Acer Nitro V </h5>
+                <p class="card-text">
+                    O Notebook Gamer Acer Nitro V15 Anv15-51-57ws é perfeito para quem busca alto desempenho em jogos e
+                    tarefas pesadas.
+                </p>
+                <a href="https://www.mercadolivre.com.br/notebook-gamer-acer-nitro-v-anv15-51-57ws-intel-core-i5-13420h-13geraco-512ssd-8gb-nvidia-geforce-rtx-3050-gddr6-linux-gutta-156/p/MLB37396835"
+                    class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
