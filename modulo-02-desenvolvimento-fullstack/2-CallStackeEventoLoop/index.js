@@ -1,7 +1,9 @@
-// Programação Síncrona (Blocking)
+// * Programação Síncrona (Blocking)
+// * A programação síncrona executa tarefas uma após a outra, aguardando a conclusão de cada uma antes de iniciar a próxima.
+
 const fs = require('fs');
 
-// console.log("1. Pedindo um hambúrguer (síncrono)...");
+console.log("1. Pedindo um hambúrguer (síncrono)...");
 
 try {
   // readFileSync = SÍNCRONO. "Sync" no final.
@@ -17,9 +19,12 @@ console.log("3. Atendendo o próximo cliente.");
 
 console.log("--------------------------------------------------");
 
-// Programação Assíncrona (Non-Blocking)
+// * Programação Assíncrona (Non-Blocking)
 
-// A Solução Clássica: Callbacks
+// * Permite que tarefas sejam iniciadas e executadas independentemente, sem esperar que as outras terminem, 
+// * o que melhora o desempenho e a responsividade, especialmente para operações demorada
+
+// * A Solução Clássica: Callbacks
 // Callback => É uma função que você passa como argumento para outra função, 
 //             para ser executada depois que a operação assíncrona terminar.
 console.log("1. Pedindo um hambúrguer (callback)...");
@@ -28,14 +33,16 @@ fs.readFile('dados.txt', 'utf8', (err, dados) => {
   if (err) {
     return console.error("2. A cozinha falhou:", err);
   }
-  console.log("1. Hambúrguer entregue! Conteúdo: ", dados);
+  console.log("3. Hambúrguer entregue! Conteúdo: ", dados);
 });
 
 // O Node.js NÃO espera. Ele registra o pedido e continua.
 console.log("2. Atendendo o próximo cliente. (enquanto a pizza está no forno)"); 
 
+console.log("--------------------------------------------------");
 
-// A Evolução: Promises (.then / .catch)
+// * A Evolução: Promises (.then / .catch)
+
 // Callbacks funcionam, mas se você precisar ler o arquivo A, depois o B, depois escrever C, 
 // você entra no "Callback Hell" (código aninhado, ilegível).
 
@@ -79,7 +86,8 @@ console.log("--------------------------------------------------");
 
 
 
-// A Sintaxe Moderna: async/await
+// * A Sintaxe Moderna: async/await
+
 // async/await é a forma mais moderna e legível de trabalhar com Promises. É apenas "açúcar sintático" (uma sintaxe mais bonita) por cima das Promises.
 // async: Declara que uma função vai lidar com código assíncrono. Ela sempre retorna uma Promise.
 // await: Pausa a execução apenas dentro da função async até que a Promise seja resolvida.
