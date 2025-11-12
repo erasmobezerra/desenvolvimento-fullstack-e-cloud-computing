@@ -46,7 +46,7 @@ console.log("--------------------------------------------------");
 // Callbacks funcionam, mas se você precisar ler o arquivo A, depois o B, depois escrever C, 
 // você entra no "Callback Hell" (código aninhado, ilegível).
 
-// As Promises são objetos que representam a conclusão (ou falha) futura de uma operação. É um "recibo" que o garçom te dá. Esse recibo pode estar em 3 estados:
+// As Promises são objetos que representam a conclusão (ou falha) futura de uma operação. É um "1recibo" que o garçom te dá. Esse recibo pode estar em 3 estados:
 
 // pending (pendente): A cozinha ainda está preparando.
 // fulfilled (realizada): O prato está pronto (sucesso).
