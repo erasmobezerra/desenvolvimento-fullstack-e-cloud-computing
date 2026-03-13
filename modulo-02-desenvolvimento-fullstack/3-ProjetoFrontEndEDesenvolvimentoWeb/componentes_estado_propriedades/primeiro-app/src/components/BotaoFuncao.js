@@ -9,7 +9,7 @@
 // }
 
 
-// *Acessando Props dos Componentes de Função
+// *Acessando Props (propriedades) dos Componentes de Função
 // A prop é um objeto que contém todas as propriedades passadas para o componente
 // através de atributos na sua invocação em JSX. 
 // A propriedade nome é passada pelo atributo nome na invocação do componente em App.js

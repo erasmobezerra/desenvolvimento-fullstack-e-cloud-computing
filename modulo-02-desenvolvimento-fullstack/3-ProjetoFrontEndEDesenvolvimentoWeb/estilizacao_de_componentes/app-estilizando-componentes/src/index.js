@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-// O react criará um Virtual DOM e renderizará o componente <App>
-// em modo estrito (React.StrictMode), ou seja, quaisquer 
-// alertas ou mensagens de erros não serão tolerados durante 
-// a execução da aplicação. 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
+

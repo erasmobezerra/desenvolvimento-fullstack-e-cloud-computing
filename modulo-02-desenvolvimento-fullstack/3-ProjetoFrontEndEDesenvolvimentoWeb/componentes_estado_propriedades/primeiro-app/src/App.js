@@ -5,9 +5,20 @@ import CabecalhoClasse from './components/CabecalhoClasse'
 import BotaoClasseIncrementar from './components/BotaoClasseIncrementar'
 import BotaoFuncaoIncrementar from './components/BotaoFuncaoIncrementar'
 
+// **COMPONENTES => São blocos de construção reutilizáveis que encapsulam a lógica e a interface de uma parte específica da aplicação.
+// **PROPS => São propriedades passadas para os componentes, permitindo que eles sejam configurados e personalizados com dados dinâmicos.
+// **STATE => É um objeto que representa o estado interno de um componente, permitindo que ele armazene e gerencie dados que podem mudar 
+// **         ao longo do tempo, afetando a renderização do componente.
 
 
 // ** Componente App com Vários Exemplos de Uso de Componentes
+// Observa-se nos componentes BotaoFuncao e BotaoClasse que as propriedades "nome" com valores 
+// "Botão Função" e "Botão Classe" são passadas como atributos na invocação dos componentes em JSX.
+
+// Observa-se também que os componentes CabecalhoFuncao e CabecalhoClasse recebem elementos filhos (filhos 1 e 2) 
+// que são passados como conteúdo entre as tags de abertura e fechamento dos componentes em JSX. Esses elementos 
+// filhos podem ser acessados dentro dos componentes usando a propriedade especial "children" do objeto props, 
+// permitindo que o conteúdo seja renderizado dinamicamente dentro do componente.
 
 export default function App() {
   return <>

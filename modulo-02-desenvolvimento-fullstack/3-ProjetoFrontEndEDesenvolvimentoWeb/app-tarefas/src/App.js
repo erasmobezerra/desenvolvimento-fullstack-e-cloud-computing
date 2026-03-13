@@ -3,24 +3,27 @@ import './App.css';
 
 export default function App() {
 
+  // Estado para armazenar as tarefas
   const [tarefas, setTarefas] = useState([
     { id: 1, titulo: 'Estudar React', completa: false },
     { id: 2, titulo: 'Estudar Node', completa: true }
   ]);
 
+  // Função para adicionar uma nova tarefa
   function novaTarefa() {
     const input = document.querySelector('div.NovaTarefa input');
-    if (input.value === '') return;
-    const id = tarefas[tarefas.length - 1].id + 1;
+    if (input.value === '') return; // Evita adicionar tarefas vazias
+    const id = tarefas[tarefas.length - 1].id + 1; // Gera um novo ID baseado no último ID da lista
     const novaTarefa = { id, titulo: input.value, completa: false };
-    setTarefas([...tarefas, novaTarefa]);
+    setTarefas([...tarefas, novaTarefa]); // Adiciona a nova tarefa à lista
     input.value = '';
   }
 
+  // Função para marcar uma tarefa como concluída
   function concluirTarefa(tarefa) {
-    const index = tarefas.findIndex(t => t.id === tarefa.id);
-    tarefas[index].completa = true;
-    setTarefas([...tarefas]);
+    const index = tarefas.findIndex(t => t.id === tarefa.id); // Encontra o índice da tarefa a ser concluída
+    tarefas[index].completa = true; // Marca a tarefa como concluída
+    setTarefas([...tarefas]); // Atualiza o estado para refletir a mudança (necessário para re-renderizar a lista)
   }
 
   return (
